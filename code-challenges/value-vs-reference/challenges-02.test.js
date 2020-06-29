@@ -9,8 +9,15 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 ------------------------------------------------------------------------------------------------ */
 
 const raisedToTheThird = (arr) => {
-  // Solution code here...
+  let x = [];
+  arr.forEach(function(item){
+    x.push(Math.pow(item,3));
+
+  })
+  return x ;
 }
+
+console.log( 'test challenge 1 =>' , raisedToTheThird([1,2,3]))
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -20,8 +27,12 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
-  // Solution code here...
+  let x = `${str} The end.`
+  return x ;
 };
+
+console.log( 'test challenge 2 =>' , appendTheEnd('This is my story.'))
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -37,8 +48,11 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  // Solution code here...
+  let x = arr;
+  x.push(arr[0]);
+  return x;
 };
+console.log( 'test challenge 3 =>' , appendFirstToLast(['Yes', 'it', 'is']))
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -56,8 +70,11 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
+  obj.yearBorn=year;
+  return obj;
 };
+console.log( 'test challenge 4 =>' , addBirthYearProperty({ fullName: 'Octavia Estelle Butler' },1947))
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
@@ -73,8 +90,17 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 const setStatusAsAuthor = (people) => {
-  // Solution code here...
+  people.forEach(function(item){
+    item.isAuthor=true;
+   
+  })
+  return people;
 };
+let test5 = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }]
+setStatusAsAuthor(test5);
+
+console.log( 'test challenge 5 =>' , test5[1].isAuthor )
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
@@ -92,9 +118,18 @@ console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
 const append = (arr1, arr2) => {
-  // Solution code here...
+  
+    arr2.forEach(myFunction);
+  
+  function myFunction(item) {
+    arr1.push(item);
+  }
+  return arr1;
+  
+  };
+  
+  console.log( 'test challenge 6=>' , append([1,2,3],[4,5,6]))
 
-};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
